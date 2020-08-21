@@ -21,3 +21,7 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet publish --configuration Release --no-restore
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: /home/runner/work/HttpTitleScan/HttpTitleScan/ConsoleApp1/bin/Release/netcoreapp3.1/publish/
